@@ -61,3 +61,13 @@ describe('multiply', () => {
     expect(multiply([1,4,2,'a','z'])).toMatch('Invalid Dataset');
   });
 });
+
+describe('divide', () => {
+  it('should divide two numbers and return quotient', () => {
+    expect(divide(4, 2, 'quotient')).toBe(2);
+  });
+  
+  it('should divide two numbers and return remainder', () => {
+    expect(divide(4, 2, 'remainder')).toBe(0);
+  });
+});
