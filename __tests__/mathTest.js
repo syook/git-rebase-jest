@@ -23,3 +23,17 @@ describe('minFive', () => {
     expect(Validate.minFive([1,2,4])).toBeFalsy();
   });
 });
+
+describe('add', () => {
+  it('should only contain numbers', () => {
+    expect(add([1,4,2,'a','z'])).toMatch('Invalid Dataset');
+  });
+  
+  it('should add all numbers in array', () => {
+    expect(add([1, 2, 3, 4, 5])).toBe(15);
+  });
+  
+  it('should not add if numbers are less than 5', () => {
+    expect(add([1,2,3])).toMatch('need more');
+  });
+});
