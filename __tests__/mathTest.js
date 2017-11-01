@@ -37,3 +37,13 @@ describe('add', () => {
     expect(add([1,2,3])).toMatch('need more');
   });
 });
+
+describe('subtract', () => {
+  it('should subtract the smaller number from the greater number', () => {
+    expect(subtract(10,5)).toBe(5);
+  });
+  
+  it('should log invalid if the second number is bigger than the first', () => {
+    expect(subtract(5,10)).toMatch('Invalid');
+  });
+});
