@@ -47,3 +47,17 @@ describe('subtract', () => {
     expect(subtract(5,10)).toMatch('Invalid');
   });
 });
+
+describe('multiply', () => {
+  it('should mupliply all numbers in array', () => {
+    expect(multiply([1,2,3,4,5])).toBe(120);
+  });
+  
+  it('should not multiply if numbers are less than 5', () => {
+    expect(multiply([1,2,3])).toMatch('need more');
+  });
+  
+  it('should only contain numbers', () => {
+    expect(multiply([1,4,2,'a','z'])).toMatch('Invalid Dataset');
+  });
+});
